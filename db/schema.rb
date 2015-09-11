@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150909125733) do
+ActiveRecord::Schema.define(version: 20150911061513) do
 
   create_table "microposts", force: :cascade do |t|
     t.text     "content",    limit: 65535
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20150909125733) do
     t.string   "password_digest",       limit: 255
     t.string   "password",              limit: 255
     t.string   "password_confirmation", limit: 255
+    t.string   "remember_digest",       limit: 255
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
